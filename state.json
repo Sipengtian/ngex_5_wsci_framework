@@ -1,0 +1,29 @@
+{
+  "diagnostic_context": {
+    "problem": "I changed my university password this morning.\nNow my Windows laptop won't connect to campus Wi-Fi,\nbut my phone still works.",
+    "device": "Windows laptop",
+    "wifi_status": "operational",
+    "selected_files": [
+      "knowledge\\wifi_setup.txt",
+      "knowledge\\password_changes.txt",
+      "knowledge\\vpn.txt",
+      "knowledge\\service_status.txt"
+    ],
+    "compressed_context": "**Compressed Context for IT Support:**  \n**Issue:** Windows laptop cannot connect to eduroam Wi-Fi after password change; phone works.  \n\n**Relevant Steps:**  \n1. **Forget eduroam network** on Windows:  \n   - Settings > Network & Internet > Wi-Fi > Select eduroam > \"Forget\" to clear cached credentials.  \n   - Reconnect to eduroam and enter the **new password**.  \n\n2. **Verify account status:** Ensure the university account is active (password change did not trigger a lockout).  \n\n3. **Check basics:**  \n   - Confirm Wi-Fi is enabled.  \n   - Confirm using the **current password** (phone works, so credentials may be correct).  \n\n4. **Cached credentials:** Windows may retain old password; \"Forget\" resolves this.  \n\n**Other Notes:**  \n- eduroam Wi-Fi is operational (no campus-wide outage).  \n- Password changes may leave cached credentials on devices; \"Forget\" and reconnect is required.  \n- VPN/other services are operational but not relevant here.  \n\n**No new facts added.**",
+    "model_output": {
+      "problem_summary": "Windows laptop cannot connect to campus Wi-Fi after university password change, while phone works.",
+      "likely_cause": "Cached credentials from the old password on the Windows laptop are preventing reconnection to eduroam.",
+      "troubleshooting_steps": [
+        "Forget eduroam network in Windows Settings > Network & Internet > Wi-Fi",
+        "Reconnect to eduroam and enter the new password",
+        "Verify university account is active (password change did not trigger lockout)",
+        "Ensure Wi-Fi is enabled and current password is being used",
+        "Check for other device-specific network restrictions"
+      ],
+      "escalation": "Contact university IT support if forgetting the network and reconnecting does not resolve the issue."
+    }
+  },
+  "service_context": {
+    "wifi": "operational"
+  }
+}
